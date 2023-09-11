@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
 }
 
 :root {
@@ -19,7 +18,7 @@ body {
 
 .container {
     display: grid;
-    grid-template: 1fr 4.5fr / 1fr 3.5fr;
+    grid-template: 1fr 4.5fr / 1fr 3.75fr;
     height: 100vh;
 }
 
@@ -36,26 +35,34 @@ body {
     display: flex;
     align-items: center;
     gap: 24px;
+    margin-top: 64px;
     padding-left: 32px;
     padding-right: 48px;
 }
 
 .side-bar > ul {
-    padding-left: 48px;
+    margin-top: 64px;
+    padding: 0 48px;
 }
 
 .side-bar li {
     list-style-type: none;
+    margin-top: 32px;
 }
 
 .side-bar a {
     color: white;
     font-size: 1.75rem;
-    font-weight: lighter;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 40px;
+}
+
+.side-bar a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 12px;
 }
 
 /* Header */
@@ -81,7 +88,7 @@ body {
 }
 
 .top-header img:hover {
-    border: 3px solid var(--dusk-mauve);
+    border: 3px solid black;
 }
 
 .top-header .search-bar {
@@ -89,6 +96,22 @@ body {
     align-items: center;
     gap: 32px;
     flex: 1;
+}
+
+.top-header input {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    padding: 8px 16px;
+    flex: 1;
+}
+
+.top-header input:hover,
+.top-header input:focus {
+    border: 1px solid black;
+    outline: none;
 }
 
 .top-header .navbar {
@@ -108,14 +131,10 @@ body {
     width: max-content;
 }
 
-.top-header input {
-    background-color: var(--daylight-pink);
-    border: 1px solid var(--daylight-pink);
-    border-radius: 100px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
-    padding: 8px 16px;
-    flex: 1;
+.top-header a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
 }
 
 .bottom-header {
@@ -213,6 +232,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 32px;
+}
+
+.project:hover,
+.card:hover {
+    box-shadow: 0 0 6px 6px white;
 }
 
 .project-header {
