@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 :root {
@@ -20,7 +20,7 @@ body {
 /* Main sections */
 .container {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template: 1fr 4fr / 1fr 3.5fr;
     height: 100vh;
 }
 
@@ -47,7 +47,7 @@ body {
     align-items: center;
     gap: 24px;
     padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 48px;
 }
 
 
@@ -84,11 +84,15 @@ body {
 }
 
 .top-header img {
-    height: 72px;
-    width: 72px;
+    height: 80px;
+    width: 80px;
+    border: 3px solid white;
     border-radius: 100%;
 }
 
+.top-header img:hover {
+    border: 3px solid var(--dusk-mauve);
+}
 
 .top-header .search-bar {
     display: flex;
@@ -116,7 +120,7 @@ body {
 
 .top-header input {
     background-color: var(--daylight-pink);
-    border: none;
+    border: 1px solid var(--daylight-pink);
     border-radius: 100px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
@@ -136,6 +140,7 @@ body {
     display: flex;
     align-items: center;
     gap: 32px;
+    margin: 8px 0;
 }
 
 .greeting-container > div {
@@ -179,4 +184,74 @@ body {
 .new-upload-share button:hover {
     background-color: var(--dusk-purple);
     border: 1px solid var(---dusk-purple);
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    gap: 48px;
+    padding: 48px 24px;
+}
+
+h2 {
+    padding-bottom: 16px;
+}
+
+.left-column {
+    flex-grow: 1;
+} 
+
+.project-container {
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project {
+    background-color: white;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 350px;
+}
+
+.announcements,
+.trending  {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.trending img {
+    height: 72px;
+    width: 72px;
+    border-radius: 100%;
+}
+
+.profile > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.bio {
+    color: gray;
 }
