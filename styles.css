@@ -17,10 +17,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }  
 
-li {
-    list-style-type: none;
-}
-
 /* Main sections */
 .container {
     display: grid;
@@ -31,7 +27,8 @@ li {
 .side-bar {
     background-color: var(--twilight-purple);
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: bold;
     grid-area: 1 / 1 / 3 / 2;
 }
 
@@ -45,12 +42,6 @@ li {
 }
 
 /* Sidebar */
-.side-bar a {
-    color: white;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
 .side-bar > div {
     display: flex;
     align-items: center;
@@ -64,7 +55,15 @@ li {
     padding-left: 48px;
 }
 
+.side-bar li {
+    list-style-type: none;
+}
+
 .side-bar a {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: lighter;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -76,17 +75,11 @@ li {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.header a {
-    color: black;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
 .top-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 48px;
+    gap: 150px;
     padding: 0 64px;
 }
 
@@ -112,6 +105,10 @@ li {
 
 .top-header label,
 .top-header a {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
     display: flex;
     align-items: center;
     width: max-content;
@@ -121,7 +118,65 @@ li {
     background-color: var(--daylight-pink);
     border: none;
     border-radius: 100px;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
     padding: 8px 16px;
     flex: 1;
+}
+
+.bottom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    padding: 0 64px;
+}
+
+.greeting-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.greeting-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: max-content;
+}
+
+.greeting-one {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.greeting-two {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.bottom-header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.new-upload-share {
+    display: flex;
+    gap: 32px;
+}
+
+.new-upload-share button {
+    color: white;
+    background-color: var(--twilight-purple);
+    border: 1px solid var(--twilight-purple);
+    border-radius: 100px;
+    font-size: 1.5rem;
+    padding: 8px 0;
+    width: 124px;
+}
+
+.new-upload-share button:hover {
+    background-color: var(--dusk-purple);
+    border: 1px solid var(---dusk-purple);
 }
